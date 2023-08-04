@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 
-//const url =`mongodb+srv://stevanakvadrat:V4st3nAd98tKV4@cluster0.e1ajbev.mongodb.net/phonebookApp?retryWrites=true&w=majority`
 
 
 mongoose.set('strictQuery',false)
