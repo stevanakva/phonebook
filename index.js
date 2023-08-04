@@ -1,3 +1,5 @@
+const Person = require('./models/person')
+
 const { response } = require('express')
 const express = require("express");
 const morgan = require("morgan");
@@ -53,7 +55,10 @@ const generateId = () => {
 }
 
 app.get('/api/persons', (request, response) => {
-    response.json(persons);
+    Person.find({}).then(persons => {
+      response.json(persons);
+    })
+    
 });
 
 app.get('/info', (request, response) => {
